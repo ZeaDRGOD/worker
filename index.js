@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/usercache.json', async (req, res) => {
   try {
-    const r = await fetch('http://185.207.166.16:12002/usercache.json');
+    const r = await fetch('http://185.207.166.118:12023/usercache.json');
     const data = await r.text();
     res.set('Access-Control-Allow-Origin', '*');
     res.set('Content-Type', 'application/json');
@@ -15,7 +15,7 @@ app.get('/usercache.json', async (req, res) => {
 
 app.get('/check/:name', async (req, res) => {
   try {
-    const r = await fetch('http://185.207.166.16:12002/check/' + req.params.name);
+    const r = await fetch('http://185.207.166.118:12023/check/' + req.params.name);
     const data = await r.text();
     res.set('Access-Control-Allow-Origin', '*');
     res.set('Content-Type', 'application/json');
